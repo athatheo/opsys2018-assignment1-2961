@@ -1,4 +1,5 @@
 #!/bin/bash
+(
 while IFS='' read -r link || [[ -n "$link" ]]; do
    x="${link////-}" 
    if [[ ${link::1} != "#" ]]; then
@@ -22,3 +23,5 @@ while IFS='' read -r link || [[ -n "$link" ]]; do
         fi
     fi
 done < "$1"
+)
+wait

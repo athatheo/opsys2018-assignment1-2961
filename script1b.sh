@@ -10,7 +10,7 @@ while IFS='' read -r link || [[ -n "$link" ]]; do
             if [ "0" != "${#DIFF_OUTPUT}" ]; then
                DIFF_FAIL_OUTPUT="$(diff empty.txt ${x}new.txt)"
 	       if [ "0" == "${#DIFF_FAIL_OUTPUT}" ]; then
-	           echo "$link FAILED"
+	       >&2 echo "$link FAILED"
 	       else 
 		   echo "$link"
 	       fi

@@ -1,4 +1,5 @@
 #!/bin/bash
+touch empty.txt
 while IFS='' read -r link || [[ -n "$link" ]]; do
    x="${link////-}" 
    if [[ ${link::1} != "#" ]]; then

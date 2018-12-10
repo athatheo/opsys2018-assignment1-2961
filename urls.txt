@@ -1,2 +1,0 @@
-# List of addresses
-http://www.tldp.org
